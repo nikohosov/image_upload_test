@@ -1,0 +1,6 @@
+RewriteCond %{THE_REQUEST} /index\.php/(.+)\sHTTP [NC]
+RewriteRule ^ /%1 [NE,L,R]
+#2)internally map "/foo/bar" to "/index.php/foo/bar"
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ /index.php/$1 [L]
