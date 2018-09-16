@@ -7,7 +7,12 @@ $core = new \base\core\Core();
 $app = new \base\Application([
     'db' => [
         'className' => \base\DBConnection::class,
-        'properties' => ['test' => "test_prop"]
+        'properties' => [
+            'host' => "localhost",
+            'db_name' => 'image_upload',
+            'username' => 'root',
+            'password' => 'not_root'
+        ]
     ],
     'urlResolver' => [
         'className' => \base\SimpleUrlResolver::class,
@@ -26,7 +31,9 @@ $app = new \base\Application([
     ],
     'authorizeComponent' => [
         'className' => \base\AuthorizeComponent::class,
-        'properties' => [],
+        'dependencies' => [
+            'userRepository' => \repositories\UserRepository::class
+        ],
     ],
     'requestComponent' => [
         'className' => \base\RequestComponent::class

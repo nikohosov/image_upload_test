@@ -3,15 +3,29 @@ namespace base;
 
 use base\core\Component;
 use base\core\Core;
+use repositories\UserRepository;
 
+/**
+ * Class AuthorizeComponent
+ * @package base
+ * @property UserRepository $useRepository
+ */
 class AuthorizeComponent extends Component
 {
-    public function getUser()
+    /**
+     * @throws UnauthorizedException
+     */
+    public function authorize()
     {
         $request = Core::$app->requestComponent->getRequest();
-        if (!array_key_exists('client_id')) {
+        if (!array_key_exists('clientId', $request)) {
             throw new UnauthorizedException('client_id not set');
         }
-
+        $user = $this->userRepository->findUserByClientId($request['clientId']);
+        if ($user) {
+            Core::$app->user = $user;
+            return true;
+        }
+        throw new UnauthorizedException('Not authorized');
     }
 }

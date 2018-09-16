@@ -3,7 +3,7 @@
 namespace base\core;
 
 
-class Component
+abstract class Component
 {
 
     /**
@@ -27,7 +27,7 @@ class Component
     public function __get($name)
     {
         if (!$this->checkDependencyExist($name)) {
-            throw  new PropertyNotExistException();
+            throw  new PropertyNotExistException('Property ' . $name . ' is not exist');
         }
         return $this->getDependency($name);
     }
@@ -54,7 +54,7 @@ class Component
     public function setDependency($name, $item)
     {
         if (is_string($item)) {
-            $this->container[$name] = $this->createObject($name);
+            $this->container[$name] = $this->createObject($item);
 
         } elseif (is_array($item)) {
             $this->setNewDependencyByConfig($item, $name);

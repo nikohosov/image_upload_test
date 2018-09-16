@@ -1,4 +1,6 @@
 <?php
+namespace entities;
+
 class User extends \base\Entity
 {
     const USER_STATUS_ACTIVE = 1;

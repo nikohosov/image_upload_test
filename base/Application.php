@@ -17,6 +17,8 @@ use base\core\SimpleUrlResolver;
  */
 class Application extends Component
 {
+    public $user;
+
     public function run()
     {
         $responce = $this->urlResolver->resolveUrl();

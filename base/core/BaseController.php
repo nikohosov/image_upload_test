@@ -38,6 +38,6 @@ class BaseController extends Component
         if (!Core::$app->checkDependencyExist('authorizeComponent')) {
             throw new CoreException('Authorize component not set');
         }
-        Core::$app->user = Core::$app->authorizeComponent->getUser();
+        return Core::$app->user = Core::$app->authorizeComponent->authorize();
     }
 }
