@@ -122,7 +122,7 @@ class Component
      * @return mixed
      * @throws CoreException
      */
-    private function createObject(string $name, $dependencies = [], $params = [])
+    public function createObject(string $name, $dependencies = [], $params = [])
     {
         if (!class_exists($name)) {
             throw new CoreException('Class ' . $name . ' is not exist');
