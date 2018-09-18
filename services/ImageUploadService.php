@@ -13,6 +13,9 @@ use services\handlers\LinkImageHandler;
  */
 class ImageUploadService extends Component
 {
+
+    public $imageFolder = 'images';
+
     public function getDependenciesArray()
     {
         return [
@@ -40,13 +43,17 @@ class ImageUploadService extends Component
         $preparedArray = [];
 
         foreach ($images as $image) {
-            $hash = base64_encode(random_bytes(10));
+            $hash = base64_encode(random_bytes(12));
+            $image['hash'] = $this->generateRandomHash(12);
             $preparedArray[$hash] = $image;
         }
         $this->imageRepository->writePreparedImages($preparedArray);
         return $preparedArray;
     }
 
+    /**
+     * @param $image
+     */
     private function handleImage($image)
     {
         if (array_key_exists('link', $image)) {
@@ -55,7 +62,19 @@ class ImageUploadService extends Component
             $handler = $this->base64ImageHandler;
         }
 
-        $handler->upload($image);
+        $handler->upload($image, $this->imageFolder);
+    }
+
+    /**
+     * @param $length
+     * @param string $keyspace
+     * @return string
+     * @throws \Exception
+     * @todo move to standalone component
+     */
+    function generateRandomHash($length)
+    {
+        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
     }
 
 }

@@ -5,18 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23386a4f-bd9c-48c1-ac9d-125eae3bd80a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/entities/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositories/ImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/handlers/Base64ImageHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/handlers/LinkImageHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/UploadedImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad3c3c44-1a64-470c-ab63-ce62fbcf4b26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ad3c3c44-1a64-470c-ab63-ce62fbcf4b26.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/imagetest.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/imagetest.loc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoloader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/AuthorizeComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/AuthorizeComponent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/DBConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/DBConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Entity.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/Entity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/RequestComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/RequestComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/SimpleUrlResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/SimpleUrlResolver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/UnauthorizedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/UnauthorizedException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/core/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/BaseMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/BaseMapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/Core.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/CoreException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/CoreException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/DependencyNotExistException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/DependencyNotExistException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/InvalidRequestException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/InvalidRequestException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/MapperInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/MapperInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/PropertyNotExistException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/PropertyNotExistException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/RequestValidatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/RequestValidatorInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/core/ResolveUrlException.php" beforeDir="false" afterPath="$PROJECT_DIR$/base/core/ResolveUrlException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/validators/ImageUploadValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/validators/ImageUploadValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/entities/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/entities/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/ImageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/ImageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/mappers/UserMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/mappers/UserMapper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/ImageUploadService.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/ImageUploadService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/handlers/Base64ImageHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/handlers/Base64ImageHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/handlers/LinkImageHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/handlers/LinkImageHandler.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,32 +95,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repositories/UserRepository.php">
+      <file leaf-file-name="Base64ImageHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/handlers/Base64ImageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="660">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
-                <element signature="e#31#50#0#PHP" expanded="true" />
+                <element signature="e#36#60#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageHandlerInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Core.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/core/Core.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -103,38 +116,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/Application.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-              <folding>
-                <element signature="e#23#47#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/core/BaseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvalidRequestException.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/core/InvalidRequestException.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestValidatorInterface.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/core/RequestValidatorInterface.php">
+      <file leaf-file-name="LinkImageHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/handlers/LinkImageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
@@ -142,11 +125,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBConnection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/DBConnection.php">
+      <file leaf-file-name="UploadedImage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/entities/UploadedImage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="959">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="240">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageHandlerInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageUploadService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/ImageUploadService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
+              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+              <folding>
+                <element signature="e#27#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mbstring.php" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mbstring/mbstring.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -156,90 +169,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageUploadValidator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/validators/ImageUploadValidator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#124#148#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/ImageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding>
-                <element signature="e#30#59#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/core/Component.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageUploadService.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/services/ImageUploadService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-              <folding>
-                <element signature="e#27#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Base64ImageHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/handlers/Base64ImageHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkImageHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/handlers/LinkImageHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repositories/ImageRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <element signature="e#31#50#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entities/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -291,9 +220,10 @@
         <option value="$PROJECT_DIR$/base/DBConnection.php" />
         <option value="$PROJECT_DIR$/repositories/ImageRepository.php" />
         <option value="$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php" />
-        <option value="$PROJECT_DIR$/services/handlers/Base64ImageHandler.php" />
         <option value="$PROJECT_DIR$/services/handlers/LinkImageHandler.php" />
+        <option value="$PROJECT_DIR$/entities/UploadedImage.php" />
         <option value="$PROJECT_DIR$/services/ImageUploadService.php" />
+        <option value="$PROJECT_DIR$/services/handlers/Base64ImageHandler.php" />
       </list>
     </option>
   </component>
@@ -328,22 +258,12 @@
             <path>
               <item name="imagetest.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="imagetest.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imagetest.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imagetest.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imagetest.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imagetest.loc" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="imagetest.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="imagetest.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="imagetest.loc" type="b2602c69:ProjectViewProjectNode" />
@@ -405,12 +325,12 @@
       <workItem from="1537093538447" duration="27562000" />
       <workItem from="1537178735007" duration="623000" />
       <workItem from="1537214521630" duration="852000" />
-      <workItem from="1537284326868" duration="11513000" />
+      <workItem from="1537284326868" duration="15667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45731000" />
+    <option name="totallyTimeSpent" value="49885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="3842" height="2136" extended-state="6" />
@@ -446,47 +366,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/base/Repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="e#23#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/core/MapperInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repositories/mappers/UserMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#40#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entities/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/core/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -729,20 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/DBConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ad3c3c44-1a64-470c-ab63-ce62fbcf4b26/schema/image_upload/table/image">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/core/RequestValidatorInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -770,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repositories/ImageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -784,20 +642,6 @@
           <folding>
             <element signature="e#31#50#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/handlers/Base64ImageHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entities/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -813,25 +657,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/core/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="1680">
           <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/handlers/LinkImageHandler.php">
+    <entry file="file://$PROJECT_DIR$/base/DBConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="959">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ad3c3c44-1a64-470c-ab63-ce62fbcf4b26/schema/image_upload/table/image">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mbstring/mbstring.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/I1NgEkhxYpfl.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/lVrgcOWTxiAX.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/9XKkBcj1Ingo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/handlers/Base64ImageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#36#60#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/ImageUploadService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="637">
+          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
           <folding>
             <element signature="e#27#51#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/handlers/ImageHandlerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/handlers/LinkImageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entities/UploadedImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
         </state>
       </provider>
     </entry>
