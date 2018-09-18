@@ -15,7 +15,16 @@ abstract class Component
     public function __construct(array $dependencies = [], array $properties = [])
     {
         $this->setDependenciesArray($dependencies);
+        $this->setDependenciesArray($this->getDependenciesArray());
         $this->setProperties($properties);
+    }
+
+    /**
+     * @return array
+     */
+    public function getDependenciesArray()
+    {
+        return [];
     }
 
     /**
