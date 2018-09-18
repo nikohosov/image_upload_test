@@ -32,7 +32,6 @@ class BaseController extends Component
         if (method_exists($this, $methodName)) {
             $this->authorize();
             $this->validateRequest($action);
-            echo 'after_validate'; exit;
             $this->beforeAction();
             $response = $this->$methodName();
             $this->afterAction();

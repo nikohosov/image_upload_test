@@ -9,7 +9,7 @@ use base\core\SimpleUrlResolver;
 /**
  * Class Application
  * @package base
- * @property $db
+ * @property DBConnection $db
  * @property SimpleUrlResolver $urlResolver
  * @property AuthorizeComponent $authoriseComponent
  * @property RequestComponent $requestComponent
