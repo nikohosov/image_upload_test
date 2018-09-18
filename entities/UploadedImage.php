@@ -6,7 +6,7 @@ class UploadedImage
 {
     public $link;
 
-    public $hashName;
+    public $hash;
 
     public $extension;
 

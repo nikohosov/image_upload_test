@@ -2,6 +2,8 @@
 namespace services;
 
 use base\core\Component;
+use entities\Image;
+use entities\UploadedImage;
 use repositories\ImageRepository;
 use services\handlers\Base64ImageHandler;
 use services\handlers\LinkImageHandler;
@@ -16,6 +18,14 @@ class ImageUploadService extends Component
 
     public $imageFolder = 'images';
 
+    /**
+     * @var array
+     * @todo move to config
+     */
+    public $allowedExtensions = ['jpeg', 'png', 'gif', 'bmp'];
+
+    public $allowedSize = 5;
+
     public function getDependenciesArray()
     {
         return [
@@ -25,12 +35,18 @@ class ImageUploadService extends Component
         ];
     }
 
+    /**
+     * @param array $data
+     * @throws \Exception
+     */
     public function uploadImages(array $data)
     {
         $images = $this->prepareImages($data['images']);
+        $result = [];
         foreach ($images as $image) {
-            $this->handleImage($image);
+            $result[] = $this->handleImage($image);
         }
+        var_dump($result); exit;
     }
 
     /**
@@ -44,7 +60,7 @@ class ImageUploadService extends Component
 
         foreach ($images as $image) {
             $hash = base64_encode(random_bytes(12));
-            $image['hash'] = $this->generateRandomHash(12);
+            $image['hash'] = $hash;
             $preparedArray[$hash] = $image;
         }
         $this->imageRepository->writePreparedImages($preparedArray);
@@ -53,6 +69,7 @@ class ImageUploadService extends Component
 
     /**
      * @param $image
+     * @return mixed
      */
     private function handleImage($image)
     {
@@ -62,7 +79,8 @@ class ImageUploadService extends Component
             $handler = $this->base64ImageHandler;
         }
 
-        $handler->upload($image, $this->imageFolder);
+        $uploadedImage =  $handler->upload($image, $this->imageFolder);
+        return $this->updateUploadedImage($uploadedImage);
     }
 
     /**
@@ -72,9 +90,36 @@ class ImageUploadService extends Component
      * @throws \Exception
      * @todo move to standalone component
      */
-    function generateRandomHash($length)
+    public function generateRandomHash($length)
     {
         return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    }
+
+    /**
+     * @param UploadedImage $image
+     * @return array
+     */
+    public function updateUploadedImage(UploadedImage $image)
+    {
+        $this->validateUploadedImage($image);
+        $this->imageRepository->updateImageByHash($image, !is_null($image->errors) ? Image::STATUS_UPLOADED : Image::STATUS_FAILED);
+        return [];
+    }
+
+    /**
+     * @param UploadedImage $image
+     * @return UploadedImage
+     */
+    private function validateUploadedImage(UploadedImage $image)
+    {
+        if (!in_array(strtolower($image->extension), $this->allowedExtensions)) {
+            $image->errors[] = 'Unsupported format';
+        }
+
+        if (filesize($image->link) > $this->allowedSize) {
+            $image->errors[] = 'File size can not exceed ' . $this->allowedSize . ' bytes';
+        }
+        return $image;
     }
 
 }

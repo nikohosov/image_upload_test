@@ -65,4 +65,16 @@ class DBConnection extends Component
         }
         $this->deleteConnection();
     }
+
+    /**
+     * @param string $sql
+     * @param array $data
+     */
+    public function update(string $sql, array $data)
+    {
+        $this->setConnection();
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute($data);
+        $this->deleteConnection();
+    }
 }
