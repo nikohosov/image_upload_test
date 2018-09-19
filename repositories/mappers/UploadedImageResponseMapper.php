@@ -10,10 +10,10 @@ class UploadedImageResponseMapper
     public function map(UploadedImage $uploadedImage)
     {
         return [
-            'original_name' => $uploadedImage->original_name,
+            'originalName' => $uploadedImage->original_name,
             'hash' => $uploadedImage->original_name,
             'link' => "http://" . $_SERVER['SERVER_NAME'] . $uploadedImage->link,
-            'status' => $uploadedImage->getStatus()
+            'status' => UploadedImage::getStatusName($uploadedImage->status)
         ];
     }
 }

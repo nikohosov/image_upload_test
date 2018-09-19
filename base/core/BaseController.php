@@ -36,7 +36,7 @@ class BaseController extends Component
      */
     public function runAction(string $action)
     {
-        try {
+       // try {
             $methodName = 'action' . ucfirst($action);
             if (method_exists($this, $methodName)) {
                 $this->authorize();
@@ -48,9 +48,9 @@ class BaseController extends Component
                 return $this->successResponse->getResponse();
             }
             throw new ResolveUrlException('Action is not exist');
-        } catch (\Exception $e) {
-            echo 'excep!';
-        }
+//        } catch (\Exception $e) {
+//            echo 'excep!';
+//        }
     }
 
     private function authorize()

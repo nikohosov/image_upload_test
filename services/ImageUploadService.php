@@ -64,7 +64,7 @@ class ImageUploadService extends Component
             $image['hash'] = $hash;
             $preparedArray[$hash] = $image;
         }
-        $this->imageRepository->writePreparedImages($preparedArray);
+        $this->imageRepository->writePreparedImages($preparedArray, Core::$app->user->id);
         return $preparedArray;
     }
 

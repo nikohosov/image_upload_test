@@ -16,14 +16,12 @@ class UploadedImage
 
     public $errors;
 
-    /**
-     * @return string
-     */
-    public function getStatus()
+
+    public static function getStatusName(int $status)
     {
-        if ($this->status === Image::STATUS_PROCESSED) {
+        if ($status === Image::STATUS_PROCESSED) {
             return 'processed';
-        } elseif ($this->status === Image::STATUS_UPLOADED) {
+        } elseif ($status === Image::STATUS_UPLOADED) {
             return 'uploaded';
         } else {
             return 'failed';
