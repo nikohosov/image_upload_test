@@ -29,4 +29,16 @@ class ImageController extends BaseController
         }
         return $formattedResult;
     }
+
+    public function actionSearch()
+    {
+        $service = new ImageUploadService();
+        $result = $service->uploadImages(Core::$app->requestComponent->getRequest());
+        $formattedResult = [];
+        $mapper = new UploadedImageResponseMapper();
+        foreach ($result as $image) {
+            $formattedResult[] = $mapper->map($image);
+        }
+        return $formattedResult;
+    }
 }

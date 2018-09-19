@@ -24,7 +24,7 @@ class ImageUploadService extends Component
      */
     public $allowedExtensions = ['jpeg', 'png', 'gif', 'bmp'];
 
-    public $allowedSize = 5;
+    public $allowedSize = 5000000;
 
     public function getDependenciesArray()
     {
@@ -103,7 +103,13 @@ class ImageUploadService extends Component
     public function updateUploadedImage(UploadedImage $image)
     {
         $this->validateUploadedImage($image);
-        $this->imageRepository->updateImageByHash($image, !is_null($image->errors) ? Image::STATUS_UPLOADED : Image::STATUS_FAILED);
+        if (!is_null($image->errors) && count($image->errors) > 0) {
+            $image->status = Image::STATUS_FAILED;
+            unlink($image->link);
+            $image->link = null;
+        }
+        $image->status = Image::STATUS_UPLOADED;
+        $this->imageRepository->updateImageByHash($image);
         return $image;
     }
 

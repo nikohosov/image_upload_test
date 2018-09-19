@@ -23,8 +23,8 @@ class AuthorizeComponent extends Component
         }
         $user = $this->userRepository->findUserByClientId($request['clientId']);
         if ($user) {
-            Core::$app->user = $user;
-            return true;
+            Core::$app->user = $user[0];
+            return $user[0];
         }
         throw new UnauthorizedException('Not authorized');
     }
