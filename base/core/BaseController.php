@@ -2,16 +2,12 @@
 namespace base\core;
 
 
+use responses\NotFoundResponse;
 use responses\SuccessResponse;
 
 class BaseController extends Component
 {
-    public function getDependenciesArray()
-    {
-        return [
-            'successResponse' => SuccessResponse::class,
-        ];
-    }
+
 
     public function beforeAction()
     {
@@ -36,21 +32,17 @@ class BaseController extends Component
      */
     public function runAction(string $action)
     {
-       // try {
-            $methodName = 'action' . ucfirst($action);
-            if (method_exists($this, $methodName)) {
-                $this->authorize();
-                $this->validateRequest($action);
-                $this->beforeAction();
-                $response = $this->$methodName();
-                $this->afterAction();
-                $this->successResponse->data = $response;
-                return $this->successResponse->getResponse();
-            }
-            throw new ResolveUrlException('Action is not exist');
-//        } catch (\Exception $e) {
-//            echo 'excep!';
-//        }
+        $methodName = 'action' . ucfirst($action);
+        if (method_exists($this, $methodName)) {
+            $this->authorize();
+            $this->validateRequest($action);
+            $this->beforeAction();
+            $response = $this->$methodName();
+            $this->afterAction();
+            Core::$app->responseComponent->successResponse->data = $response;
+            return Core::$app->responseComponent->successResponse->getResponse();
+        }
+        throw new ResolveUrlException('Action is not exist');
     }
 
     private function authorize()
@@ -86,7 +78,7 @@ class BaseController extends Component
         }
 
         if (count($errors) > 0) {
-            $error = new InvalidRequestException();
+            $error = new InvalidRequestException('Invalid request');
             $error->errors = $errors;
             throw $error;
         }
