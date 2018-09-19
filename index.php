@@ -37,7 +37,8 @@ $app = new \base\Application([
     ],
     'requestComponent' => [
         'className' => \base\RequestComponent::class
-    ]
+    ],
+    'responseComponent' => \base\ResponseComponent::class
 
 ]);
 $core::$app = $app;

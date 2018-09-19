@@ -13,6 +13,7 @@ use base\core\SimpleUrlResolver;
  * @property SimpleUrlResolver $urlResolver
  * @property AuthorizeComponent $authoriseComponent
  * @property RequestComponent $requestComponent
+ * @property ResponseComponent $responseComponent
  * @todo make exceptions for key components call
  */
 class Application extends Component
@@ -21,9 +22,6 @@ class Application extends Component
 
     public function run()
     {
-        $responce = $this->urlResolver->resolveUrl();
-        var_dump(Core::$app->db); exit;
-
-        echo 'asds'; exit;
+        $this->urlResolver->resolveUrl();
     }
 }

@@ -37,6 +37,7 @@ class ImageUploadService extends Component
 
     /**
      * @param array $data
+     * @return array
      * @throws \Exception
      */
     public function uploadImages(array $data)
@@ -46,7 +47,7 @@ class ImageUploadService extends Component
         foreach ($images as $image) {
             $result[] = $this->handleImage($image);
         }
-        var_dump($result); exit;
+        return $result;
     }
 
     /**
@@ -103,7 +104,7 @@ class ImageUploadService extends Component
     {
         $this->validateUploadedImage($image);
         $this->imageRepository->updateImageByHash($image, !is_null($image->errors) ? Image::STATUS_UPLOADED : Image::STATUS_FAILED);
-        return [];
+        return $image;
     }
 
     /**

@@ -2,8 +2,17 @@
 namespace base\core;
 
 
+use responses\SuccessResponse;
+
 class BaseController extends Component
 {
+    public function getDependenciesArray()
+    {
+        return [
+            'successResponse' => SuccessResponse::class,
+        ];
+    }
+
     public function beforeAction()
     {
 
@@ -27,18 +36,21 @@ class BaseController extends Component
      */
     public function runAction(string $action)
     {
-        $methodName = 'action' . ucfirst($action);
-
-        if (method_exists($this, $methodName)) {
-            $this->authorize();
-            $this->validateRequest($action);
-            $this->beforeAction();
-            $response = $this->$methodName();
-            $this->afterAction();
-            return $response;
+        try {
+            $methodName = 'action' . ucfirst($action);
+            if (method_exists($this, $methodName)) {
+                $this->authorize();
+                $this->validateRequest($action);
+                $this->beforeAction();
+                $response = $this->$methodName();
+                $this->afterAction();
+                $this->successResponse->data = $response;
+                return $this->successResponse->getResponse();
+            }
+            throw new ResolveUrlException('Action is not exist');
+        } catch (\Exception $e) {
+            echo 'excep!';
         }
-
-        throw new ResolveUrlException('Action is not exist');
     }
 
     private function authorize()
